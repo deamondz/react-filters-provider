@@ -236,8 +236,10 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
-"@deamondz/react-filters-provider@file:../../lib":
-  version "0.0.0"
+"@d.lukyanov/react-filters-provider@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@d.lukyanov/react-filters-provider/-/react-filters-provider-0.0.3.tgz#846b34785c29b02017030e7bad10db239cdb83d7"
+  integrity sha512-w4NDjYU6VQdHIa4Ihp2f4O0LqgxCzE7ymGsCVDShOYpYIfO9HgUzmClrDbyV0NoVExVi2/9smZVcC4jKTpaxKg==
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"

@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   TableConfigProps,
   TableConfigProvider,
-} from "@deamondz/react-filters-provider";
+} from "@d.lukyanov/react-filters-provider";
 
 import { TestPage } from "./TestPage";
 

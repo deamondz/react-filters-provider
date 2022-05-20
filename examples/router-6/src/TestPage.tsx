@@ -5,7 +5,7 @@ import {
   TablePropsProvider,
   useFilters,
   useTableProps,
-} from "@deamondz/react-filters-provider";
+} from "@d.lukyanov/react-filters-provider";
 
 export const Table: FC = () => {
   const config = useTableProps();

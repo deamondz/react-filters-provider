@@ -1,5 +1,5 @@
 {
-  "name": "react-filters-provider-docs",
+  "name": "react-filters-provider-examples",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -8,9 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@d.lukyanov/react-filters-provider": "^0.0.3",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "@deamondz/react-filters-provider": "file:../../lib"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
