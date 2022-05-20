@@ -1,0 +1,36 @@
+{
+  "name": "@deamondz/react-filters-provider",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "type": "module",
+  "author": "d.lukyanov@netrika.ru",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/qs": "^6.9.7",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "qs": "^6.10.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "typescript": "^4.6.4"
+  },
+  "peerDependencies": {
+    "qs": "^6.10.3",
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
+    "react-router": "5.x - 6.x",
+    "react-router-dom": "5.x - 6.x"
+  },
+  "files": [
+    "lib/**/*",
+    "package.json",
+    "README.md"
+  ]
+}
