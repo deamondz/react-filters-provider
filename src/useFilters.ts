@@ -43,6 +43,7 @@ export type FilterActionType =
       }
     | {
         type: ACTIONS.APPLY_FILTERS;
+        payload?: FiltersValuesType;
       }
     | {
         type: ACTIONS.SET_SHOULD_UPDATE_URL;
@@ -140,11 +141,23 @@ function filtersReducer(state: FiltersStateType, action: FilterActionType) {
 
         // Применить текущие фильтры
         case ACTIONS.APPLY_FILTERS: {
-            const newValues = state.tmpFilters;
+            if (action.payload) {
+                const newValues = {
+                    ...state.tmpFilters,
+                    ...action.payload,
+                };
+
+                return {
+                    ...state,
+                    tmpFilters: newValues,
+                    appliedFilters: newValues,
+                    shouldUpdateUrl: true,
+                };
+            }
 
             return {
                 ...state,
-                appliedFilters: newValues,
+                appliedFilters: { ...state.tmpFilters },
                 shouldUpdateUrl: true,
             };
         }
@@ -167,7 +180,7 @@ export type UseFiltersActionsType = {
     setFilters: (values: FiltersValuesType) => void;
     setAndApplyFilters: (values: FiltersValuesType) => void;
     applyFilter: (name: string, value: FiltersValueType) => void;
-    applyFilters: () => void;
+    applyFilters: (values?: FiltersValuesType) => void;
     resetFilters: () => void;
 };
 
@@ -250,9 +263,10 @@ export function useFilters(): UseFiltersType {
                     payload: { name, value },
                 });
             },
-            applyFilters: () => {
+            applyFilters: (values?: FiltersValuesType) => {
                 dispatch({
                     type: ACTIONS.APPLY_FILTERS,
+                    payload: values,
                 });
             },
             resetFilters: () => {

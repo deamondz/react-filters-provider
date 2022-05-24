@@ -60,7 +60,7 @@ setFilters({
 
 ### RESET_FILTERS
 
-Возвращение к исходным фильтрам, переданным в `initialFilterValues`
+Возвращение к исходным фильтрам, переданным в `initialFilterValues`, после этого происходит обновление урла
 
 ### APPLY_FILTER
 
@@ -94,5 +94,13 @@ setAndApplyFilters({
 ```
 const [_, { applyFilters }] = useFilters();
 
-applyFilters();
+
+applyFilters(); // простое применение фильтров
+
+// либо
+
+applyFilters({ // Установка новых фильтров и применение
+    created_at__before: '2020-01-02',
+    created_at__after: '2020-01-01',
+});
 ```
